@@ -3,6 +3,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@layer components {
+  .glassmorphism {
+    @apply bg-white/25 backdrop-blur-[4px] border border-white/20;
+  }
+}
+
 @theme inline { 
 
   --color-dark-1: #1C1F2E;
@@ -126,6 +132,8 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -134,3 +142,37 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/* Clerk Override Styles */
+.cl-socialButtonsBlockButtonText {
+  color: white;
+}
+
+.cl-socialButtonsBlockButton {
+  background-color: #252a41;
+}
+
+.cl-dividerLine {
+  background-color: #252a41;
+}
+
+.cl-formFieldInputShowPasswordIcon {
+  filter: invert(1);
+}
+
+.cl-userButtonPopoverActionButton {
+  color: white;
+}
+
+.cl-userButtonPopoverActionButton:hover {
+  color: #bbbbbb;
+}
+
+
+.cl-userButtonPopoverActionButtonIcon {
+  color: white;
+}
+
+
+
